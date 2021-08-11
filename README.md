@@ -12,7 +12,7 @@ Template foi utilizado na versão do Zabbix 5.0.2
 3. Verifique se os novos dados estão chegando.
 
 ### Chave: discoverdisks.discovery
-# Itens monitorados:
+#### Itens monitorados:
 - Average Disk queue lengh/Escrita
 - Average Disk queue lengh/Leitura
 - Average Disk queue lenght
