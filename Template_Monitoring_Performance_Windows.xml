@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>5.0</version>
+    <date>2021-08-11T04:15:42Z</date>
+    <groups>
+        <group>
+            <name>Template - LogicalDisk</name>
+        </group>
+        <group>
+            <name>Templates - Windows Servers</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template - Monitoring Windows Logical Disk</template>
+            <name>Template - Monitoring Windows Logical Disk</name>
+            <description>Template criado para auxiliar no monitoramento de performance dos discos do Sistema Operacional.&#13;
+Criado por: Renata Guimarães</description>
+            <groups>
+                <group>
+                    <name>Template - LogicalDisk</name>
+                </group>
+                <group>
+                    <name>Templates - Windows Servers</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>LogicalDisk</name>
+                </application>
+                <application>
+                    <name>SpaceDisk</name>
+                </application>
+            </applications>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>Discover Logical Disk</name>
+                    <key>discoverdisks.discovery</key>
+                    <delay>15s</delay>
+                    <lifetime>60d</lifetime>
+                    <description>Monitoramento de Discos Lógicos do Windows.</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Current Disk Queue Length (Req)</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\198&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <units>(Req)</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Time (%)</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\200&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <units>%</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Time Read (%)</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\202&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <units>%</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Time Write (%)</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\204&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <units>%</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Avg. Disk sec/Transfer</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\206&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <units>ms</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) -Avg. Disk sec/Leitura</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\208&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <units>ms</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Avg. Disk sec/Escrita</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\210&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <units>ms</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Transfers/sec</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\212&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <units>IOPs</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Reads/sec</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\214&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <units>IOPs</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Writes/sec</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\216&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <units>IOPs</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Bytes/sec</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\218&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <units>MB/s</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Average Disk queue lenght</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\1400&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Average Disk queue lengh/Leitura</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\1402&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Average Disk queue lengh/Escrita</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\1404&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Idle Time (%)</name>
+                            <key>perf_counter[&quot;\236({#DISKNUMLET})\1482&quot;]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <value_type>FLOAT</value_type>
+                            <units>%</units>
+                            <applications>
+                                <application>
+                                    <name>LogicalDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Free</name>
+                            <key>vfs.fs.size[{#DISKNUMLET},free]</key>
+                            <delay>3m</delay>
+                            <history>7d</history>
+                            <units>B</units>
+                            <applications>
+                                <application>
+                                    <name>SpaceDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Free (%)</name>
+                            <key>vfs.fs.size[{#DISKNUMLET},pfree]</key>
+                            <delay>3m</delay>
+                            <value_type>FLOAT</value_type>
+                            <units>%</units>
+                            <applications>
+                                <application>
+                                    <name>SpaceDisk</name>
+                                </application>
+                            </applications>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last(0)}&lt;5</expression>
+                                    <name>Disco ({#DISKNUMLET}) - Espaço livre em disco é menor que 5%</name>
+                                    <priority>DISASTER</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Total</name>
+                            <key>vfs.fs.size[{#DISKNUMLET},total]</key>
+                            <delay>30s</delay>
+                            <history>7d</history>
+                            <units>B</units>
+                            <applications>
+                                <application>
+                                    <name>SpaceDisk</name>
+                                </application>
+                            </applications>
+                        </item_prototype>
+                    </item_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Average Disk Latency (ms)</name>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\208&quot;]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\206&quot;]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>2774A4</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\210&quot;]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Bytes/sec (MB/s)</name>
+                            <graph_items>
+                                <graph_item>
+                                    <color>303F9F</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\218&quot;]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk free (%)</name>
+                            <yaxismax>0</yaxismax>
+                            <show_work_period>NO</show_work_period>
+                            <show_triggers>NO</show_triggers>
+                            <type>PIE</type>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>vfs.fs.size[{#DISKNUMLET},pfree]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Idle (%)</name>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\1482&quot;]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Disk ({#DISKNUMLET}) -  Disk queue lenght (FILA)</name>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\1404&quot;]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>00ACC1</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\1402&quot;]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>BF00FF</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\1400&quot;]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>3</sortorder>
+                                    <color>FF0000</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\198&quot;]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Space</name>
+                            <show_work_period>NO</show_work_period>
+                            <show_triggers>NO</show_triggers>
+                            <graph_items>
+                                <graph_item>
+                                    <color>FF0000</color>
+                                    <type>GRAPH_SUM</type>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>vfs.fs.size[{#DISKNUMLET},total]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>2E7D32</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>vfs.fs.size[{#DISKNUMLET},free]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Time (%)</name>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\200&quot;]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\202&quot;]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>2774A4</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\204&quot;]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>Disk ({#DISKNUMLET}) - Disk Transfers/sec (IOPS)</name>
+                            <graph_items>
+                                <graph_item>
+                                    <color>1A7C11</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\214&quot;]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>1</sortorder>
+                                    <color>F63100</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\212&quot;]</key>
+                                    </item>
+                                </graph_item>
+                                <graph_item>
+                                    <sortorder>2</sortorder>
+                                    <color>2774A4</color>
+                                    <item>
+                                        <host>Template - Monitoring Windows Logical Disk</host>
+                                        <key>perf_counter[&quot;\236({#DISKNUMLET})\216&quot;]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
+                </discovery_rule>
+            </discovery_rules>
+        </template>
+    </templates>
+</zabbix_export>
