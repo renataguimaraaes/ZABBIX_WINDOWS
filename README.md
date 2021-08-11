@@ -32,7 +32,7 @@ Template foi utilizado na versão do Zabbix 5.0.2
 - Disk Writes/sec
 - Idle Time (%)
 
-## No cliente a ser monitorado
+## No cliente que será monitorado
 
 1. Import the [`Template_App_Apache_HTTP_Server_active.xml`](Template_App_Apache_HTTP_Server_active.xml)
    into your Zabbix server (click on the `Raw` button to download).
