@@ -11,7 +11,26 @@ Template foi utilizado na versão do Zabbix 5.0.2
 2. Adicione o template para o servidor
 3. Verifique se os novos dados estão chegando.
 
-
+### Chave: discoverdisks.discovery
+# Itens monitorados:
+- Average Disk queue lengh/Escrita
+- Average Disk queue lengh/Leitura
+- Average Disk queue lenght
+- Avg. Disk sec/Escrita
+- Avg. Disk sec/Leitura
+- Avg. Disk sec/Transfer
+- Current Disk Queue Length (Req)
+- Disk Bytes/sec
+- Disk Free
+- Disk Free (%)
+- Disk Reads/sec
+- Disk Time (%)
+- Disk Time Read (%)
+- Disk Time Write (%)
+- Disk Total
+- Disk Transfers/sec
+- Disk Writes/sec
+- Idle Time (%)
 
 ## No cliente a ser monitorado
 
