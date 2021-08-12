@@ -39,7 +39,7 @@ E abaixo segue os contadores a nível de performance que foram selecionados para
 
 ## No cliente que será monitorado
 
-1. Import the [`Template_App_Apache_HTTP_Server_active.xml`](Template_App_Apache_HTTP_Server_active.xml)
+1. Faça o download da pasta do [`Zabbix.rar`](ZABBIX)
    into your Zabbix server (click on the `Raw` button to download).
 2. Add the template to your host (or stack template)
 3. Check if new data arrives
