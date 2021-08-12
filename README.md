@@ -14,7 +14,7 @@ Template foi utilizado na versão do Zabbix 5.0.2
 
 ### Itens Monitorados: 
 Os itens a ser monitorados são contadores do perfmon. O modelo utilizado para monitoramento é o lógico (236).
-A chave utilizada é a discoverdisks.discovery
+A chave utilizada é a discoverdisks.discovery .
 E abaixo segue os contadores a nível de performance que foram selecionados para o template.
 
 #### Itens monitorados:
