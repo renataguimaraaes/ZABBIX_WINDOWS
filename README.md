@@ -54,4 +54,4 @@ sc start "zabbix agent"
 ## OBS:
 Com a execução do script dentro do Windows, independente de ser um disco apresentado diretamente ou como ponto de montagem, é possível monitorar índices de performance.
 Em aplicações que possuem a necessidade de adição de uma quantidade de discos além da limitação do Windows (26 unidades impostas pelas letras de unidade) é utiizada o mapeamento de discos dentro de uma unidade, ou mais popularmente, pontos de montagem. E o template padrão do Zabbix não consegue validar esse tipo de unidade, sendo então o objetivo desse projeto.
-Qualquer dúvida, sugestão, segue meu linkedIn [`renataaguimaraes`] (LinkedIn)
+Qualquer dúvida, sugestão, segue meu linkedIn [`renataaguimaraes`] 
