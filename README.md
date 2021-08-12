@@ -53,6 +53,10 @@ sc start "zabbix agent"
 
 # GRAFANA_WINDOWS
 
+[`Dashboard%20Windows%20Server.json`](GRAFANA)
+
+
+
 
 ## OBS:
 Com a execução do script dentro do Windows, independente de ser um disco apresentado diretamente ou como ponto de montagem, é possível monitorar índices de performance.
