@@ -11,7 +11,12 @@ Template foi utilizado na versão do Zabbix 5.0.2
 2. Adicione o template para o servidor
 3. Verifique se os novos dados estão chegando.
 
-### Chave: discoverdisks.discovery
+
+### Itens Monitorados: 
+Os itens a ser monitorados são contadores do perfmon. O modelo utilizado para monitoramento é o lógico (236).
+A chave utilizada é a discoverdisks.discovery
+E abaixo segue os contadores a nível de performance que foram selecionados para o template.
+
 #### Itens monitorados:
 - Average Disk queue lengh/Escrita
 - Average Disk queue lengh/Leitura
