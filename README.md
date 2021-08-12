@@ -39,7 +39,7 @@ E abaixo segue os contadores a nível de performance que foram selecionados para
 
 ## No cliente que será monitorado
 
-1. Faça o download da pasta do [`Zabbix.rar`](ZABBIX), faça a descompactação do arquivo e copie para o c:\ do Windows.
+1. Faça o download da pasta do [`Zabbix.rar`](https://github.com/renataguimaraaes/ZABBIX_WINDOWS/blob/main/Zabbix.rar), faça a descompactação do arquivo e copie para o c:\ do Windows.
 2. Criar e Iniciar o Serviço no Windows via powershell: 
 #### 64bits: 
 C:\Zabbix\bin\win64\zabbix_agentd.exe -i -c C:\Zabbix\conf\zabbix_agentd.win.conf
@@ -53,7 +53,7 @@ sc start "zabbix agent"
 
 # GRAFANA_WINDOWS
 
-[`Dashboard%20Windows%20Server.json`](GRAFANA)
+[`Dashboard Windows Server.json`](https://github.com/renataguimaraaes/ZABBIX_WINDOWS/blob/main/Dashboard%20Windows%20Server.json)
 
 
 
